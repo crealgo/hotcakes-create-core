@@ -1,0 +1,10 @@
+{
+	"name": "@crealgo/pancakes-core",
+	"version": "1.0.0",
+	"publishConfig": {
+		"access": "public",
+		"tag": "latest"
+	},
+	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
+	"license": "ISC"
+}
