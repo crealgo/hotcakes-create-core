@@ -10,7 +10,7 @@
 		"strict": true,
 		"alwaysStrict": true,
 		"noEmit": true,
-		"module": "ES6",
+		"module": "ESNext",
 		"target": "ES6",
 		"allowUmdGlobalAccess": true,
 		"moduleResolution": "node",
