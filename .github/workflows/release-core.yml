@@ -8,6 +8,6 @@ on:
 jobs:
   release:
     uses: ./.github/workflows/semantic-release.yml
-    secrets:
+    with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       npm-token: ${{ secrets.NPM_TOKEN }}
