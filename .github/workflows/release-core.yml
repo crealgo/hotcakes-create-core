@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   release:
-    uses: crealgo/hotcakes-core/.github/workflows/semantic-release.yml
+    uses: ./.github/workflows/semantic-release.yml
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       npm-token: ${{ secrets.NPM_TOKEN }}

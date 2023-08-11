@@ -2,15 +2,13 @@ name: Semantic Release
 
 on:
   workflow_call:
-    inputs:
+    secrets:
       github-token:
         description: The NPM Token that lets you interace with github repos
         required: true
-        type: string
       npm-token:
         description: The NPM Token that lets you publish to the npm registry
         required: true
-        type: string
 
 permissions:
   contents: read
@@ -39,6 +37,6 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ inputs.github-token }}
-          NPM_TOKEN: ${{ inputs.npm-token }}
+          GITHUB_TOKEN: ${{ secrets.github-token }}
+          NPM_TOKEN: ${{ secrets.npm-token }}
         run: npx semantic-release
