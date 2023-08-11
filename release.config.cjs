@@ -1,4 +1,4 @@
-modules.exports = {
+module.exports = {
 	branches: ["main", "next"],
 	plugins: [
 		"@semantic-release/commit-analyzer",
