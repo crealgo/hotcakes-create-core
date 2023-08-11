@@ -9,3 +9,5 @@ jobs:
   release:
     uses: ./.github/workflows/semantic-release.yml
     secrets: inherit
+    with:
+      repository: ${{ github.repository }}
