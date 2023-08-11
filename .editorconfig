@@ -2,7 +2,11 @@
 indent_size = 2
 indent_style = tab
 
-[*.{yaml,yml,releaserc}]
+[*.{yaml,yml}]
+indent_size = 2
+indent_style = space
+
+[.{releaserc,npmrc}]
 indent_size = 2
 indent_style = space
 
