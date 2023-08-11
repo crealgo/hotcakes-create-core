@@ -2,6 +2,10 @@
 indent_size = 2
 indent_style = tab
 
+[*.{yaml,yml,releaserc}]
+indent_size = 2
+indent_style = space
+
 [*.{cjs,mjs,js,jsx,ts,tsx}]
 indent_size = 4
 indent_style = tab
