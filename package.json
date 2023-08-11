@@ -1,6 +1,6 @@
 {
   "name": "@hotcakes/core",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
