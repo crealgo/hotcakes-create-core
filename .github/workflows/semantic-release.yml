@@ -2,14 +2,6 @@ name: Semantic Release
 
 on:
   workflow_call:
-    inputs:
-      repository:
-        description: "The repository to release"
-        required: true
-        type: string
-
-permissions:
-  contents: read
 
 jobs:
   release:
