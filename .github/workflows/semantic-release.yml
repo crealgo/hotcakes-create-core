@@ -3,6 +3,10 @@ name: Semantic Release
 on:
   workflow_call:
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -24,7 +28,4 @@ jobs:
           npm install --save-dev @semantic-release/git
 
       - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
