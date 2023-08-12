@@ -9,5 +9,11 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+
     uses: crealgo/hotcakes-core/.github/workflows/semantic-release.yml@main
     secrets: inherit
