@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
   release:
-    uses: ./.github/workflows/semantic-release.yml
+    uses: crealgo/hotcakes-core/.github/workflows/semantic-release.yml@main
