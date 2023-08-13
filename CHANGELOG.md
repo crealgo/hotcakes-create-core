@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/crealgo/hotcakes-core/compare/v1.5.0...v1.5.1) (2023-08-13)
+
+
+### Bug Fixes
+
+* trigger release ([86bc426](https://github.com/crealgo/hotcakes-core/commit/86bc426812ad80563d196fb0949549138ad3307c))
+
 # [1.5.0](https://github.com/crealgo/hotcakes-core/compare/v1.4.0...v1.5.0) (2023-08-11)
 
 
