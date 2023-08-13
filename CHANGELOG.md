@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/crealgo/hotcakes-core/compare/v1.5.1...v1.6.0) (2023-08-13)
+
+
+### Features
+
+* move everything to src folder ([cdb5f98](https://github.com/crealgo/hotcakes-core/commit/cdb5f98310492470fb5087d02f6448f85c7e0ede))
+
 ## [1.5.1](https://github.com/crealgo/hotcakes-core/compare/v1.5.0...v1.5.1) (2023-08-13)
 
 
