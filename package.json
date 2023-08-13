@@ -1,6 +1,6 @@
 {
 	"name": "@hotcakes/core",
-	"version": "1.6.1",
+	"version": "1.6.0",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -13,9 +13,5 @@
 	],
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-	"license": "ISC",
-	"devDependencies": {
-		"@semantic-release/changelog": "^6.0.3",
-		"@semantic-release/git": "^10.0.1"
-	}
+	"license": "ISC"
 }
