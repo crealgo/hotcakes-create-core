@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"lib": [
 			"ES6",
-			"DOM"
+			"DOM",
 		],
 		"forceConsistentCasingInFileNames": true,
 		"allowJs": true,
@@ -12,6 +12,7 @@
 		"noEmit": true,
 		"module": "ESNext",
 		"target": "ES6",
+		"allowSyntheticDefaultImports": true,
 		"allowUmdGlobalAccess": true,
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
@@ -21,6 +22,9 @@
 		"jsx": "react-jsx",
 		"incremental": true
 	},
+	"include": [
+		"**/*"
+	],
 	"exclude": [
 		"node_modules",
 		"*.json"
