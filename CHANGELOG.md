@@ -1,3 +1,11 @@
+## [1.6.3](https://github.com/crealgo/hotcakes-core/compare/v1.6.2...v1.6.3) (2023-08-14)
+
+
+### Bug Fixes
+
+* ci ([710a844](https://github.com/crealgo/hotcakes-core/commit/710a8442689c1af9ea497f4b2d17e6ed3a95d553))
+* remove extra deps ([aac35af](https://github.com/crealgo/hotcakes-core/commit/aac35af24afb7bf11d370181fea206bb893471b7))
+
 ## [1.6.2](https://github.com/crealgo/hotcakes-core/compare/v1.6.1...v1.6.2) (2023-08-14)
 
 
