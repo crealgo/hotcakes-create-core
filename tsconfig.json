@@ -1,3 +1,32 @@
 {
-	"extends": "./src/tsconfig.json",
+	"compilerOptions": {
+		"lib": [
+			"ES6",
+			"DOM",
+		],
+		"forceConsistentCasingInFileNames": true,
+		"allowJs": true,
+		"checkJs": true,
+		"strict": true,
+		"alwaysStrict": true,
+		"noEmit": true,
+		"module": "ESNext",
+		"target": "ES6",
+		"allowSyntheticDefaultImports": true,
+		"allowUmdGlobalAccess": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"resolvePackageJsonImports": false,
+		"resolvePackageJsonExports": false,
+		"jsxImportSource": "react",
+		"jsx": "react-jsx",
+		"incremental": true
+	},
+	"include": [
+		"**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"*.json"
+	]
 }

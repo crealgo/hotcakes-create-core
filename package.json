@@ -5,17 +5,14 @@
 		"access": "public"
 	},
 	"exports": {
-		"./release-config": "./src/release.config.cjs",
-		"./typescript-config": "./src/tsconfig.json"
+		"./release-config": "./release.config.cjs",
+		"./typescript-config": "./tsconfig.json"
 	},
 	"files": [
-		"src"
+		"release.config.cjs",
+		"tsconfig.json"
 	],
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
-	"license": "ISC",
-	"devDependencies": {
-		"@semantic-release/changelog": "^6.0.3",
-		"@semantic-release/git": "^10.0.1"
-	}
+	"license": "ISC"
 }
