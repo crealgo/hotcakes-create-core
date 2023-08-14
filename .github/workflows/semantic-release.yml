@@ -27,8 +27,8 @@ jobs:
 
       - name: Setup Semantic Release
         run: |
-          npm install --no-save @semantic-release/changelog
-          npm install --no-save @semantic-release/git
+          npm install -g @semantic-release/changelog
+          npm install -g @semantic-release/git
 
       - name: Release
         env:
