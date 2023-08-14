@@ -25,16 +25,13 @@ jobs:
       - name: Install dependencies
         run: npm clean-install
 
-      # - name: Setup Semantic Release
-      #  run: |
-      #    npm install --no-save @semantic-release/changelog
-      #    npm install --no-save @semantic-release/git
+      - name: Setup Semantic Release
+        run: |
+          npm install --save-dev @semantic-release/changelog
+          npm install --save-dev @semantic-release/git
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm install --no-save @semantic-release/changelog
-          npm install --no-save @semantic-release/git
-          npx semantic-release
+        run: npx semantic-release
