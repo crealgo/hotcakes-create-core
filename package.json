@@ -1,6 +1,6 @@
 {
 	"name": "@hotcakes/core",
-	"version": "1.6.3",
+	"version": "1.7.0",
 	"main": "./src/index.cjs",
 	"types": "./src/index.d.ts",
 	"publishConfig": {
