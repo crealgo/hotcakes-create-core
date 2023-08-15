@@ -16,7 +16,7 @@
       "DOM",
     ],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "resolvePackageJsonExports": false,
     "resolvePackageJsonImports": false,
