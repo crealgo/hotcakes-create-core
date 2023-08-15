@@ -1,8 +1,8 @@
 {
 	"name": "@hotcakes/core",
 	"version": "1.6.3",
-	"main": "",
-	"types": "./index.d.ts",
+	"main": "./src/index.cjs",
+	"types": "./src/index.d.ts",
 	"publishConfig": {
 		"access": "public"
 	},
