@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/crealgo/hotcakes-core/compare/v1.6.3...v1.7.0) (2023-08-15)
+
+
+### Bug Fixes
+
+* add main and types ([2583af0](https://github.com/crealgo/hotcakes-core/commit/2583af01630a89037cf01b1f55549332a6576f77))
+
+
+### Features
+
+* add types ([39e3a50](https://github.com/crealgo/hotcakes-core/commit/39e3a508eb30be655e2cce63868d14abba1bc572))
+
 ## [1.6.3](https://github.com/crealgo/hotcakes-core/compare/v1.6.2...v1.6.3) (2023-08-14)
 
 
