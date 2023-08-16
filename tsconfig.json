@@ -14,13 +14,17 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"noEmit": true,
+		"types": [
+			"node",
+			"react",
+			"react-dom",
+			"lodash"
+		],
 		"lib": [
 			"ES6",
 			"DOM"
 		],
 		"resolveJsonModule": true,
-		"resolvePackageJsonExports": false,
-		"resolvePackageJsonImports": false,
 		"strict": true
 	},
 	"include": [
