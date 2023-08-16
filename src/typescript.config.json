@@ -24,6 +24,6 @@
 		"strict": true
 	},
 	"include": [
-		"src/**/*"
-	],
+		"src/**/*.cjs"
+	]
 }

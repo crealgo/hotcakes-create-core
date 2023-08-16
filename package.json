@@ -7,8 +7,12 @@
 		"access": "public"
 	},
 	"exports": {
-		"./release-config": "./src/release.config.cjs",
-		"./typescript-config": "./src/tsconfig.json"
+		"./release-config": "./lib/esm/release.config.cjs",
+		"./typescript-config": "./lib/esm/typescript.config.json",
+		"./eslint-config-js": "./lib/esm/eslint-js.config.cjs",
+		"./eslint-config-ts": "./lib/esm/eslint-ts.config.cjs",
+		"./eslint-config-jsx": "./lib/esm/eslint-jsx.config.cjs",
+		"./eslint-config-tsx": "./lib/esm/eslint-tsx.config.cjs"
 	},
 	"files": [
 		"src"
@@ -16,7 +20,31 @@
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
 	"license": "ISC",
+	"dependencies": {
+		"@hotcakes/core": "^1.6.3",
+		"@rushstack/eslint-patch": "^1.3.3",
+		"@typescript-eslint/eslint-plugin": "^6.3.0",
+		"@typescript-eslint/parser": "^6.3.0",
+		"eslint-config-typescript": "^3.0.0",
+		"eslint-config-xo": "^0.43.1",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-config-xo-typescript": "*",
+		"eslint-plugin-react": "^7.33.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"lodash": "^4.17.21",
+		"xo": "^0.56.0"
+	},
 	"devDependencies": {
-		"typescript": "^5.1.6"
+		"@types/react": "^18.2.18",
+		"@types/react-dom": "^18.2.7",
+		"tsx": "^3.12.7",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.9"
+	},
+	"peerDependencies": {
+		"eslint": "8.x",
+		"react": "18.x",
+		"react-dom": "18.x",
+		"typescript": "5.x"
 	}
 }
