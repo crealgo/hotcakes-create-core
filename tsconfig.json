@@ -28,6 +28,6 @@
 		"strict": true
 	},
 	"include": [
-		"src/**/*"
+		"lib/**/*"
 	],
 }

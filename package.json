@@ -1,41 +1,21 @@
 {
 	"name": "@hotcakes/core",
 	"version": "1.7.0",
-	"main": "./src/index.cjs",
-	"types": "./src/index.d.ts",
+	"main": "./lib/index.cjs",
+	"types": "./lib/global.d.ts",
 	"publishConfig": {
 		"access": "public"
 	},
 	"scripts": {
-		"build": "npm run build:esm && npm run build:cjs",
-		"build:esm": "tsc --project tsconfig.esm.json",
-		"build:cjs": "tsc --project tsconfig.cjs.json"
+		"build": "tsc --project tsconfig.build.json"
 	},
 	"exports": {
-		"./release-config": {
-			"import": "./lib/esm/release.config.js",
-			"require": "./lib/cjs/release.config.js"
-		},
-		"./typescript-config": {
-			"import": "./lib/esm/typescript.config.json",
-			"require": "./lib/cjs/typescript.config.json"
-		},
-		"./eslint-config-js": {
-			"import": "./lib/esm/eslint-js.config.js",
-			"require": "./lib/cjs/eslint-js.config.js"
-		},
-		"./eslint-config-ts": {
-			"import": "./lib/esm/eslint-ts.config.js",
-			"require": "./lib/cjs/eslint-ts.config.js"
-		},
-		"./eslint-config-jsx": {
-			"import": "./lib/esm/eslint-jsx.config.js",
-			"require": "./lib/cjs/eslint-jsx.config.js"
-		},
-		"./eslint-config-tsx": {
-			"import": "./lib/esm/eslint-tsx.config.js",
-			"require": "./lib/cjs/eslint-tsx.config.js"
-		}
+		"./release-config": "./lib/release.config.js",
+		"./typescript-config": "./lib/typescript.config.json",
+		"./eslint-config-js": "./lib/eslint-js.config.js",
+		"./eslint-config-ts": "./lib/eslint-ts.config.js",
+		"./eslint-config-jsx": "./lib/eslint-jsx.config.js",
+		"./eslint-config-tsx": "./lib/eslint-tsx.config.js"
 	},
 	"files": [
 		"lib"
