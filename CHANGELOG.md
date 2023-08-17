@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/crealgo/hotcakes-core/compare/v1.8.0...v1.8.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* exports ([9ee7cab](https://github.com/crealgo/hotcakes-core/commit/9ee7cab3a6a136bdc06dbca261875c57e1a2fb44))
+
 # [1.8.0](https://github.com/crealgo/hotcakes-core/compare/v1.7.0...v1.8.0) (2023-08-17)
 
 
