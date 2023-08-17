@@ -1,1 +1,1 @@
-module.exports = require(require.resolve('./lib/release.config.cjs'));
+module.exports = require('lib/release.config.cjs');
