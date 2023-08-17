@@ -1,3 +1,24 @@
+# [1.8.0](https://github.com/crealgo/hotcakes-core/compare/v1.7.0...v1.8.0) (2023-08-17)
+
+
+### Bug Fixes
+
+* add tsconfig ([2754055](https://github.com/crealgo/hotcakes-core/commit/27540552ed869bf29a71e02c445457be5e0febd2))
+* **ci:** resolve module path ([0931330](https://github.com/crealgo/hotcakes-core/commit/09313306569df6662b920cd89690c73aa328e3f9))
+* **ci:** resolve module path ([322a0be](https://github.com/crealgo/hotcakes-core/commit/322a0be4f6bad7790a13f60281a77d4eddce7f86))
+* **ci:** resolve module path ([7f893e8](https://github.com/crealgo/hotcakes-core/commit/7f893e89204dce740cfd6039f63663c293020461))
+* **ci:** resolve module path ([77d57c1](https://github.com/crealgo/hotcakes-core/commit/77d57c183515b849560c194127e82a2f14c0237c))
+* not extending ([53a52f0](https://github.com/crealgo/hotcakes-core/commit/53a52f0d67b69d2790e4925f6ccdee90d92f6bb3))
+* remove extra ts files ([f87aa51](https://github.com/crealgo/hotcakes-core/commit/f87aa51d61bcb4b6f0fddab8bd547799c74b54b2))
+* update mmoduleResolution ([9b0d1ca](https://github.com/crealgo/hotcakes-core/commit/9b0d1cafef722c260788483508f7804cf0c82803))
+
+
+### Features
+
+* add ts into build process ([a25299a](https://github.com/crealgo/hotcakes-core/commit/a25299af0e24e411010f3f11a69ee469d4732910))
+* add vitest testing ([908b64e](https://github.com/crealgo/hotcakes-core/commit/908b64ea4481c5fa367754682706d926b088d889))
+* switch to ts ([a1af209](https://github.com/crealgo/hotcakes-core/commit/a1af209712948402db2fcfb9353b3540dabb876c))
+
 # [1.7.0](https://github.com/crealgo/hotcakes-core/compare/v1.6.3...v1.7.0) (2023-08-15)
 
 
