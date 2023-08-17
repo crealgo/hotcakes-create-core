@@ -11,8 +11,11 @@
 		"test:watch": "vitest watch",
 		"build": "tsc --project tsconfig.build.json"
 	},
+	"exports": {
+		"./*": "./lib/*"
+	},
 	"files": [
-		"lib"
+		"lib/**/*"
 	],
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
