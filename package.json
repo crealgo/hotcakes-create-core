@@ -12,12 +12,12 @@
 		"build": "tsc --project tsconfig.build.json"
 	},
 	"exports": {
-		"./release-config": "./lib/release.config.js",
+		"./release-config": "./lib/release.config.cjs",
 		"./typescript-config": "./lib/typescript.config.json",
-		"./eslint-config-js": "./lib/eslint-js.config.js",
-		"./eslint-config-ts": "./lib/eslint-ts.config.js",
-		"./eslint-config-jsx": "./lib/eslint-jsx.config.js",
-		"./eslint-config-tsx": "./lib/eslint-tsx.config.js"
+		"./eslint-config-js": "./lib/eslint-js.cjs",
+		"./eslint-config-ts": "./lib/eslint-ts.cjs",
+		"./eslint-config-jsx": "./lib/eslint-jsx.cjs",
+		"./eslint-config-tsx": "./lib/eslint-tsx.cjs"
 	},
 	"files": [
 		"lib"
