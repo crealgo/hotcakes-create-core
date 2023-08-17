@@ -11,14 +11,6 @@
 		"test:watch": "vitest watch",
 		"build": "tsc --project tsconfig.build.json"
 	},
-	"exports": {
-		"./release-config": "./lib/release.config.cjs",
-		"./typescript-config": "./lib/typescript.config.json",
-		"./eslint-config-js": "./lib/eslint-js.cjs",
-		"./eslint-config-ts": "./lib/eslint-ts.cjs",
-		"./eslint-config-jsx": "./lib/eslint-jsx.cjs",
-		"./eslint-config-tsx": "./lib/eslint-tsx.cjs"
-	},
 	"files": [
 		"lib"
 	],
