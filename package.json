@@ -1,6 +1,6 @@
 {
 	"name": "@hotcakes/core",
-	"version": "1.8.1",
+	"version": "1.8.2",
 	"main": "./lib/index.cjs",
 	"types": "./lib/global.d.ts",
 	"publishConfig": {
