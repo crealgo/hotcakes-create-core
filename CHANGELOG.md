@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/crealgo/hotcakes-core/compare/v1.8.1...v1.8.2) (2023-08-19)
+
+
+### Bug Fixes
+
+* remove lib from gitignore ([937beb4](https://github.com/crealgo/hotcakes-core/commit/937beb4de9d023328fe1c1efff07180597d4fd82))
+
 ## [1.8.1](https://github.com/crealgo/hotcakes-core/compare/v1.8.0...v1.8.1) (2023-08-17)
 
 
