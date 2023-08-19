@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "ESNext",
+		"moduleResolution": "NodeNext",
+		"allowJs": true,
+		"checkJs": true,
+		"allowSyntheticDefaultImports": true,
+		"allowUmdGlobalAccess": true,
+		"alwaysStrict": true,
+		"declaration": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"noEmit": true,
+		"types": [
+			"node",
+			"react",
+			"react-dom",
+			"lodash"
+		],
+		"lib": [
+			"ES6",
+			"DOM"
+		],
+		"resolveJsonModule": true,
+		"strict": true
+	}
+}
