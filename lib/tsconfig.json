@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "ESNext",
-		"moduleResolution": "NodeNext",
+		"moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
@@ -14,12 +14,6 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"noEmit": true,
-		"types": [
-			"node",
-			"react",
-			"react-dom",
-			"lodash"
-		],
 		"lib": [
 			"ES6",
 			"DOM"
