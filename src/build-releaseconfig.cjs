@@ -1,4 +1,6 @@
-module.exports = {
+const fs = require('fs');
+
+const config = {
 	branches: ['main'],
 	plugins: [
 		'@semantic-release/commit-analyzer',
@@ -10,3 +12,4 @@ module.exports = {
 	],
 };
 
+fs.writeFileSync('lib/.releaserc.json', JSON.stringify(config, null, 2));

@@ -1,4 +1,6 @@
+const fs = require('fs');
 
+const yamlString = `
 [*]
 indent_size = 2
 indent_style = tab
@@ -15,3 +17,6 @@ indent_style = space
 [*.{cjs,mjs,js,jsx,ts,tsx}]
 indent_size = 4
 indent_style = tab
+`;
+
+fs.writeFileSync('lib/.editorconfig', yamlString);

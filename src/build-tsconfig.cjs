@@ -1,8 +1,10 @@
-{
+const fs = require('fs');
+
+const config = {
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "ESNext",
-		"moduleResolution": "NodeNext",
+		"moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
@@ -19,11 +21,8 @@
 			"DOM"
 		],
 		"resolveJsonModule": true,
-		"resolvePackageJsonExports": false,
-		"resolvePackageJsonImports": false,
 		"strict": true
-	},
-	"include": [
-		"src/**/*.cjs"
-	]
+	}
 }
+
+fs.writeFileSync('lib/tsconfig.json', JSON.stringify(config, null, 2));
