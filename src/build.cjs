@@ -8,8 +8,8 @@ if (fs.existsSync('lib')) {
 
 fs.mkdirSync('lib');
 
-childProcess.execSync('node src/build-editorconfig.cjs');
 childProcess.execSync('node src/build-eslint.cjs');
+childProcess.execSync('node src/build-editorconfig.cjs');
 childProcess.execSync('node src/build-releaseconfig.cjs');
 childProcess.execSync('node src/build-tsconfig.cjs');
 

@@ -4,13 +4,19 @@ const baseConfig = require('eslint-config-xo');
 const reactConfig = require('eslint-config-xo-react');
 const tsConfig = require('eslint-config-xo-typescript');
 
-const handleArrays = (a, b) => {
-  if (_.isArray(a)) {
-    return _.uniq(a.concat(b));
-  }
-}
+const handleArrays = (value1, value2, key) => {
+	if (key === 'rules') {
+		return _.merge(value1, value2);
+	}
 
-// const baseConfigJSON = _.merge
+	if (key === 'comman-dangle') {
+		return console.log('hello')
+	}
+
+	if (_.isArray(value1)) {
+			return _.uniq(value1.concat(value2));
+		}
+}
 
 const baseConfigString = JSON.stringify(baseConfig, null, 2);
 

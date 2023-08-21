@@ -14,11 +14,7 @@
   },
   "reportUnusedDisableDirectives": true,
   "rules": {
-    "comma-dangle": [
-      "error",
-      "always-multiline",
-      "off"
-    ],
+    "comma-dangle": "off",
     "for-direction": "error",
     "getter-return": "error",
     "no-async-promise-executor": "error",
@@ -160,13 +156,7 @@
     "no-sequences": "error",
     "no-throw-literal": "off",
     "no-unmodified-loop-condition": "error",
-    "no-unused-expressions": [
-      "error",
-      {
-        "enforceForJSX": true
-      },
-      "off"
-    ],
+    "no-unused-expressions": "off",
     "no-unused-labels": "error",
     "no-useless-call": "error",
     "no-useless-catch": "error",
@@ -210,37 +200,10 @@
     ],
     "no-shadow-restricted-names": "error",
     "no-undef-init": "error",
-    "no-undef": [
-      "error",
-      {
-        "typeof": true
-      },
-      "off"
-    ],
-    "no-unused-vars": [
-      "error",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": true,
-        "argsIgnorePattern": "^_",
-        "caughtErrors": "all",
-        "caughtErrorsIgnorePattern": "^_$"
-      },
-      "off"
-    ],
+    "no-undef": "off",
+    "no-unused-vars": "off",
     "no-buffer-constructor": "error",
-    "no-restricted-imports": [
-      "error",
-      "domain",
-      "freelist",
-      "smalloc",
-      "punycode",
-      "sys",
-      "querystring",
-      "colors",
-      "off"
-    ],
+    "no-restricted-imports": "off",
     "array-bracket-newline": [
       "error",
       "consistent"
@@ -253,21 +216,8 @@
       "error",
       "consistent"
     ],
-    "brace-style": [
-      "error",
-      "1tbs",
-      {
-        "allowSingleLine": false
-      },
-      "off"
-    ],
-    "camelcase": [
-      "error",
-      {
-        "properties": "always"
-      },
-      "off"
-    ],
+    "brace-style": "off",
+    "camelcase": "off",
     "capitalized-comments": [
       "error",
       "always",
@@ -277,14 +227,7 @@
         "ignoreConsecutiveComments": true
       }
     ],
-    "comma-spacing": [
-      "error",
-      {
-        "before": false,
-        "after": true
-      },
-      "off"
-    ],
+    "comma-spacing": "off",
     "comma-style": [
       "error",
       "last"
@@ -297,11 +240,7 @@
       }
     ],
     "eol-last": "error",
-    "func-call-spacing": [
-      "error",
-      "never",
-      "off"
-    ],
+    "func-call-spacing": "off",
     "func-name-matching": [
       "error",
       {
@@ -316,14 +255,7 @@
       "error",
       "consistent"
     ],
-    "indent": [
-      "error",
-      "tab",
-      {
-        "SwitchCase": 1
-      },
-      "off"
-    ],
+    "indent": "off",
     "jsx-quotes": [
       "error",
       "prefer-single"
@@ -340,14 +272,7 @@
       "error",
       "unix"
     ],
-    "lines-between-class-members": [
-      "error",
-      "always",
-      {
-        "exceptAfterSingleLine": true
-      },
-      "off"
-    ],
+    "lines-between-class-members": "off",
     "max-depth": "warn",
     "max-nested-callbacks": [
       "warn",
@@ -385,11 +310,7 @@
     "no-whitespace-before-property": "error",
     "no-trailing-spaces": "error",
     "no-unneeded-ternary": "error",
-    "object-curly-spacing": [
-      "error",
-      "never",
-      "off"
-    ],
+    "object-curly-spacing": "off",
     "one-var": [
       "error",
       "never"
@@ -410,26 +331,14 @@
         "allowSingleLineBlocks": false
       }
     ],
-    "padding-line-between-statements": [
-      "error",
-      {
-        "blankLine": "always",
-        "prev": "multiline-block-like",
-        "next": "*"
-      },
-      "off"
-    ],
+    "padding-line-between-statements": "off",
     "prefer-exponentiation-operator": "error",
     "prefer-object-spread": "error",
     "quote-props": [
       "error",
       "as-needed"
     ],
-    "quotes": [
-      "error",
-      "single",
-      "off"
-    ],
+    "quotes": "off",
     "semi-spacing": [
       "error",
       {
@@ -441,25 +350,9 @@
       "error",
       "last"
     ],
-    "semi": [
-      "error",
-      "always",
-      "off"
-    ],
-    "space-before-blocks": [
-      "error",
-      "always",
-      "off"
-    ],
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "always",
-        "named": "never",
-        "asyncArrow": "always"
-      },
-      "off"
-    ],
+    "semi": "off",
+    "space-before-blocks": "off",
+    "space-before-function-paren": "off",
     "space-in-parens": [
       "error",
       "never"
