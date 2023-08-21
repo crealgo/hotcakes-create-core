@@ -2,7 +2,6 @@
 	"name": "@hotcakes/core",
 	"version": "1.8.3",
 	"main": "lib/index.cjs",
-	"types": "lib/index.d.cts",
 	"type": "module",
 	"publishConfig": {
 		"access": "public"
@@ -10,10 +9,10 @@
 	"scripts": {
 		"test": "vitest run",
 		"test:watch": "vitest watch",
-		"build": "tsc --project tsconfig.build.json"
+		"build": "node src/build.cjs",
+		"prepack": "npm run build"
 	},
 	"files": [
-		"dist/**/*",
 		"lib/**/*"
 	],
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
