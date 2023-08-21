@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/crealgo/hotcakes-core/compare/v1.8.3...v1.9.0) (2023-08-21)
+
+
+### Features
+
+* switch to json ([e9a95d9](https://github.com/crealgo/hotcakes-core/commit/e9a95d9b48000386a7872b9787ac2bd932d511f5))
+
 ## [1.8.3](https://github.com/crealgo/hotcakes-core/compare/v1.8.2...v1.8.3) (2023-08-19)
 
 
