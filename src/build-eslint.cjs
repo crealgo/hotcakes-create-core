@@ -26,15 +26,19 @@ const overrides = {
 	}
 }
 
-const tsOverrides = {
-	rules: {
-		'@typescript-eslint/no-unsafe-return': 'off',
-	}
-}
-
 const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleArrays);
 const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleArrays);
-const tsConfigJSON = _.mergeWith(baseConfig, tsConfig, overrides, tsOverrides, handleArrays);
+const tsConfigJSON = _.mergeWith(baseConfig, {
+	overrides: [
+		_.mergeWith(tsConfig, {
+			files: ['*.ts', '*.tsx'],
+			parser: "./node_modules/@typescript-eslint/parser/dist/index.js",
+			rules: {
+				'@typescript-eslint/no-unsafe-return': 'off',
+			},
+		}, handleArrays)
+	]
+}, overrides, handleArrays);
 
 fs.writeFileSync('lib/eslint-js.json', JSON.stringify(baseConfigJSON, null, 2));
 fs.writeFileSync('lib/eslint-jsx.json', JSON.stringify(reactConfigJSON, null, 2));
