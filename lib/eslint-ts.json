@@ -285,13 +285,7 @@
       }
     ],
     "max-statements-per-line": "error",
-    "new-cap": [
-      "error",
-      {
-        "newIsCap": true,
-        "capIsNew": true
-      }
-    ],
+    "new-cap": "off",
     "new-parens": "error",
     "no-array-constructor": "off",
     "no-bitwise": "error",
@@ -485,6 +479,15 @@
       "error",
       "both"
     ],
+    "react/react-in-jsx-scope": "off",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          "class"
+        ]
+      }
+    ],
     "react/boolean-prop-naming": [
       "error",
       {
@@ -527,13 +530,11 @@
     ],
     "react/no-this-in-sfc": "error",
     "react/no-unescaped-entities": "error",
-    "react/no-unknown-property": "error",
     "react/no-unsafe": "error",
     "react/no-unused-prop-types": "error",
     "react/no-unused-state": "error",
     "react/prefer-read-only-props": "error",
     "react/prop-types": "error",
-    "react/react-in-jsx-scope": "error",
     "react/require-default-props": [
       "error",
       {
@@ -1044,7 +1045,7 @@
     "@typescript-eslint/no-unsafe-call": "error",
     "@typescript-eslint/no-unsafe-declaration-merging": "error",
     "@typescript-eslint/no-unsafe-enum-comparison": "error",
-    "@typescript-eslint/no-unsafe-return": "error",
+    "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-useless-empty-export": "error",
     "@typescript-eslint/no-unused-expressions": "error",
     "@typescript-eslint/no-useless-constructor": "error",

@@ -18,18 +18,24 @@ const handleArrays = (value1, value2, key) => {
 		}
 }
 
-const baseConfigString = JSON.stringify(baseConfig, null, 2);
+const overrides = {
+	rules: {
+		'new-cap': 'off',
+		'react/react-in-jsx-scope': 'off',
+		"react/no-unknown-property": ["error", { ignore: ["class"] }]
+	}
+}
 
-const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, handleArrays);
-const reactConfigString = JSON.stringify(reactConfigJSON, null, 2);
+const tsOverrides = {
+	rules: {
+		'@typescript-eslint/no-unsafe-return': 'off',
+	}
+}
 
-const tsConfigJSON = _.mergeWith(baseConfig, tsConfig, handleArrays);
-const tsConfigString = JSON.stringify(tsConfigJSON, null, 2);
+const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleArrays);
+const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleArrays);
+const tsConfigJSON = _.mergeWith(baseConfig, tsConfig, overrides, tsOverrides, handleArrays);
 
-const tsxConfigJSON = _.mergeWith(baseConfig, reactConfig, tsConfig, handleArrays);
-const tsxConfigString = JSON.stringify(tsxConfigJSON, null, 2);
-
-fs.writeFileSync('lib/eslint-js.json', baseConfigString);
-fs.writeFileSync('lib/eslint-jsx.json', reactConfigString);
-fs.writeFileSync('lib/eslint-ts.json', tsConfigString);
-fs.writeFileSync('lib/eslint-tsx.json', tsxConfigString);
+fs.writeFileSync('lib/eslint-js.json', JSON.stringify(baseConfigJSON, null, 2));
+fs.writeFileSync('lib/eslint-jsx.json', JSON.stringify(reactConfigJSON, null, 2));
+fs.writeFileSync('lib/eslint-ts.json', JSON.stringify(tsConfigJSON, null, 2));
