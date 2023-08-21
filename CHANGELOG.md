@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/crealgo/hotcakes-core/compare/v1.10.0...v1.10.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* comma-dangle overwrite ([925d71a](https://github.com/crealgo/hotcakes-core/commit/925d71aa1d17525d8cc283242d2932067249b271))
+
 # [1.10.0](https://github.com/crealgo/hotcakes-core/compare/v1.9.0...v1.10.0) (2023-08-21)
 
 
