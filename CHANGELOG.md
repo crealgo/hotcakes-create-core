@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/crealgo/hotcakes-core/compare/v1.10.1...v1.11.0) (2023-08-21)
+
+
+### Features
+
+* add overrides ([66e625a](https://github.com/crealgo/hotcakes-core/commit/66e625aa75b96ed1a9e00ce49b1bc5d39a981ce4))
+
 ## [1.10.1](https://github.com/crealgo/hotcakes-core/compare/v1.10.0...v1.10.1) (2023-08-21)
 
 
