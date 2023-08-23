@@ -2,9 +2,9 @@ const fs = require('fs');
 const _ = require('lodash');
 const baseConfig = require('eslint-config-xo');
 const reactConfig = require('eslint-config-xo-react');
-const tsConfig = require('eslint-config-xo-typescript');
+const {overrides: tsOverrides, ...tsConfig} = require('eslint-config-xo-typescript');
 
-const handleArrays = (value1, value2, key) => {
+const handleExceptions = (value1, value2, key) => {
 	if (key === 'rules') {
 		return _.merge(value1, value2);
 	}
@@ -26,19 +26,28 @@ const overrides = {
 	}
 }
 
-const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleArrays);
-const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleArrays);
+const {} = {overrides};
+
+const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleExceptions);
+const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleExceptions);
+
+const tsParserPath = './node_modules/@typescript-eslint/parser/dist/index.js';
 const tsConfigJSON = _.mergeWith(baseConfig, {
 	overrides: [
 		_.mergeWith(tsConfig, {
 			files: ['*.ts', '*.tsx'],
-			parser: "./node_modules/@typescript-eslint/parser/dist/index.js",
+			parser: tsParserPath,
 			rules: {
 				'@typescript-eslint/no-unsafe-return': 'off',
 			},
-		}, handleArrays)
+		}, handleExceptions),
+		...tsOverrides
 	]
-}, overrides, handleArrays);
+}, overrides, handleExceptions);
+
+tsConfigJSON.overrides[0].settings["import/parsers"] = {
+	[tsParserPath]: ['.ts', '.tsx']
+}
 
 fs.writeFileSync('lib/eslint-js.json', JSON.stringify(baseConfigJSON, null, 2));
 fs.writeFileSync('lib/eslint-jsx.json', JSON.stringify(reactConfigJSON, null, 2));
