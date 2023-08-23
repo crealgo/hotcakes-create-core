@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/crealgo/hotcakes-core/compare/v1.11.0...v1.12.0) (2023-08-23)
+
+
+### Bug Fixes
+
+* change parser path ([2cfc128](https://github.com/crealgo/hotcakes-core/commit/2cfc12877657472f9f07519ab665bb73ea3c17ed))
+
+
+### Features
+
+* update ts parser path ([fbb414e](https://github.com/crealgo/hotcakes-core/commit/fbb414ebeb2e8b5efa898c7d1c52f45693ce371e))
+
 # [1.11.0](https://github.com/crealgo/hotcakes-core/compare/v1.10.1...v1.11.0) (2023-08-21)
 
 
