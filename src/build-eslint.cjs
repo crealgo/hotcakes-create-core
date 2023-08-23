@@ -22,7 +22,14 @@ const overrides = {
 	rules: {
 		'new-cap': 'off',
 		'react/react-in-jsx-scope': 'off',
-		"react/no-unknown-property": ["error", { ignore: ["class"] }]
+		"react/no-unknown-property": ["error", { ignore: ["class"] }],
+		"react/function-component-definition": [
+			"error",
+			{
+				namedComponents: "arrow-function",
+				unnamedComponents: "arrow-function"
+			}
+		],
 	}
 }
 
@@ -32,7 +39,7 @@ const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleExceptions);
 const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleExceptions);
 
 const tsParserPath = './node_modules/@typescript-eslint/parser/dist/index.js';
-const tsConfigJSON = _.mergeWith(baseConfig, {
+const tsConfigJSON = _.mergeWith(reactConfigJSON, {
 	overrides: [
 		_.mergeWith(tsConfig, {
 			files: ['*.ts', '*.tsx'],
