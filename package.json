@@ -1,6 +1,6 @@
 {
 	"name": "@hotcakes/core",
-	"version": "1.12.0",
+	"version": "1.12.1",
 	"main": "lib/index.cjs",
 	"type": "module",
 	"publishConfig": {

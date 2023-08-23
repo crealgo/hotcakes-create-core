@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/crealgo/hotcakes-core/compare/v1.12.0...v1.12.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* enforce arrow function ([c9b67b8](https://github.com/crealgo/hotcakes-core/commit/c9b67b85d378fb70bc2c4e7bee81cda52fd2050c))
+
 # [1.12.0](https://github.com/crealgo/hotcakes-core/compare/v1.11.0...v1.12.0) (2023-08-23)
 
 
