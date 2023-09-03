@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"target": "ES6",
-		"module": "ES6",
+		"target": "ESNext",
+		"module": "ESNext",
 		"moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
@@ -15,13 +15,15 @@
 		"jsxImportSource": "react",
 		"noEmit": true,
 		"lib": [
-			"ES6",
-			"DOM"
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
 		],
 		"resolveJsonModule": true,
 		"strict": true
 	},
 	"include": [
-		"src/**/*.{cjs}"
+		"src/**/*.cjs",
+		"src/**/*.ts"
 	],
 }

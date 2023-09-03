@@ -1,21 +1,23 @@
-const fs = require('fs');
-const _ = require('lodash');
-const baseConfig = require('eslint-config-xo');
-const reactConfig = require('eslint-config-xo-react');
-const {overrides: tsOverrides, ...tsConfig} = require('eslint-config-xo-typescript');
+import fs from 'fs';
+import _ from 'lodash';
+import baseConfig from 'eslint-config-xo';
+import reactConfig from 'eslint-config-xo-react';
+import xoTsConfig from 'eslint-config-xo-typescript';
 
-const handleExceptions = (value1, value2, key) => {
+const {overrides: tsOverrides, ...tsConfig} = xoTsConfig;
+
+const handleExceptions = (value1: any, value2: any, key: string) => {
 	if (key === 'rules') {
 		return _.merge(value1, value2);
 	}
 
-	if (key === 'comman-dangle') {
+	if (key === 'comma-dangle') {
 		return console.log('hello')
 	}
 
 	if (_.isArray(value1)) {
-			return _.uniq(value1.concat(value2));
-		}
+		return _.uniq(value1.concat(value2));
+	}
 }
 
 const overrides = {

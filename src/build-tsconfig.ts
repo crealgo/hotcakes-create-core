@@ -1,10 +1,10 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const config = {
 	"compilerOptions": {
-    "target": "ESNext",
+		"target": "ESNext",
 		"module": "ESNext",
-    "moduleResolution": "Node",
+		"moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
