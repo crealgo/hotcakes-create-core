@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/crealgo/hotcakes-core/compare/v1.13.0...v1.14.0) (2023-09-03)
+
+
+### Features
+
+* switch to ts ([5298c4a](https://github.com/crealgo/hotcakes-core/commit/5298c4aa76c933ecd6867d1c4c6096de0f752421))
+
 # [1.13.0](https://github.com/crealgo/hotcakes-core/compare/v1.12.1...v1.13.0) (2023-09-03)
 
 
