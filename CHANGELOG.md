@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/crealgo/hotcakes-core/compare/v1.12.1...v1.13.0) (2023-09-03)
+
+
+### Features
+
+* update tsconfig ([b0f1499](https://github.com/crealgo/hotcakes-core/commit/b0f14990b548ead7aa1b3aff928174644d388638))
+
 ## [1.12.1](https://github.com/crealgo/hotcakes-core/compare/v1.12.0...v1.12.1) (2023-08-23)
 
 
