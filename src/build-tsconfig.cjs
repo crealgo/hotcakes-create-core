@@ -2,9 +2,9 @@ const fs = require('fs');
 
 const config = {
 	"compilerOptions": {
-		"target": "ES6",
+    "target": "ESNext",
 		"module": "ESNext",
-		"moduleResolution": "Node",
+    "moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
@@ -17,12 +17,13 @@ const config = {
 		"jsxImportSource": "react",
 		"noEmit": true,
 		"lib": [
-			"ES6",
-			"DOM"
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
 		],
 		"resolveJsonModule": true,
 		"strict": true
-	}
+	},
 }
 
 fs.writeFileSync('lib/tsconfig.json', JSON.stringify(config, null, 2));

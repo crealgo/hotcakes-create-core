@@ -20,8 +20,10 @@ const handleExceptions = (value1, value2, key) => {
 
 const overrides = {
 	rules: {
+		'capitalized-comments': 'off',
 		'new-cap': 'off',
 		'react/react-in-jsx-scope': 'off',
+		"react/require-default-props": "off",
 		"react/no-unknown-property": ["error", { ignore: ["class"] }],
 		"react/function-component-definition": [
 			"error",
@@ -32,8 +34,6 @@ const overrides = {
 		],
 	}
 }
-
-const {} = {overrides};
 
 const baseConfigJSON = _.mergeWith(baseConfig, overrides, handleExceptions);
 const reactConfigJSON = _.mergeWith(baseConfig, reactConfig, overrides, handleExceptions);
@@ -46,6 +46,7 @@ const tsConfigJSON = _.mergeWith(reactConfigJSON, {
 			parser: tsParserPath,
 			rules: {
 				'@typescript-eslint/no-unsafe-return': 'off',
+				'@typescript-eslint/consistent-type-definitions': 'off',
 			},
 		}, handleExceptions),
 		...tsOverrides
