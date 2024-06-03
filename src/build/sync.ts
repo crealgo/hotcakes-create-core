@@ -1,10 +1,9 @@
 import fs from 'fs';
 
-const srcFolder = 'src';
-const templatesFolder = `${srcFolder}/__templates__`;
+const dest = 'src/__templates__';
 
-if (!fs.existsSync(templatesFolder)) {
-	fs.mkdirSync(templatesFolder);
+if (!fs.existsSync(dest)) {
+	fs.mkdirSync(dest);
 }
 
 [
@@ -13,12 +12,12 @@ if (!fs.existsSync(templatesFolder)) {
 	'.releaserc.json',
 	'package.json',
 ].forEach(fileName => {
-	fs.copyFileSync(fileName, `${templatesFolder}/${fileName}`);
+	fs.copyFileSync(fileName, `${dest}/${fileName}`);
 });
 
 [
 	'.github/workflows',
 	'.devcontainer',
 ].forEach(folderName => {
-	fs.cpSync(folderName, `${templatesFolder}/${folderName}`, {recursive: true});
+	fs.cpSync(folderName, `${dest}/${folderName}`, {recursive: true});
 });

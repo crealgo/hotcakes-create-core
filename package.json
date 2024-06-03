@@ -1,19 +1,20 @@
 {
 	"name": "@hotcakes/core",
 	"version": "1.14.0",
-	"main": "lib/src/index.js",
+	"main": "lib/index.js",
 	"type": "module",
 	"publishConfig": {
 		"access": "public"
 	},
-	"files": ["src/**/*"],
+	"files": ["lib"],
 	"bin": {
-		"setup": "src/index.js"
+		"setup": "lib/scripts/setup.js"
 	},
 	"scripts": {
-		"sync": "npx tsx ./src/build/sync.ts",
-		"build": "npx tsc",
-		"prepack": "npm run sync"
+		"sync": "npx tsx src/build/sync.ts",
+		"prebuild": "npm run sync",
+		"build": "npx tsc --noEmit false && cp -R src/__templates__ lib/__templates__",
+		"prepack": "npm run build"
 	},
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
