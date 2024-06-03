@@ -6,11 +6,14 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"files": ["src/**/*"],
 	"bin": {
-		"setup": "lib/src/index.js"
+		"setup": "src/index.js"
 	},
 	"scripts": {
-		"sync": "npx tsx ./src/build/sync.ts"
+		"sync": "npx tsx ./src/build/sync.ts",
+		"build": "npx tsc",
+		"prepack": "npm run sync"
 	},
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",

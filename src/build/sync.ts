@@ -1,5 +1,4 @@
 import fs from 'fs';
-import cp from 'child_process';
 
 const srcFolder = 'src';
 const templatesFolder = `${srcFolder}/__templates__`;
