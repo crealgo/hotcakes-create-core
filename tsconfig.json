@@ -3,6 +3,7 @@
 		"target": "ESNext",
 		"module": "ESNext",
 		"moduleResolution": "Node",
+		"outDir": "./lib",
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
@@ -11,8 +12,6 @@
 		"declaration": true,
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "react",
 		"noEmit": true,
 		"lib": [
 			"ESNext",
@@ -20,10 +19,9 @@
 			"DOM.Iterable"
 		],
 		"resolveJsonModule": true,
-		"strict": true
+		"strict": true,
 	},
 	"include": [
-		"src/**/*.cjs",
-		"src/**/*.ts"
+		"src"
 	],
 }
