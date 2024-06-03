@@ -1,0 +1,28 @@
+{
+	"name": "Hotcakes Core | Dev Container",
+	"image": "docker.io/node:20-bullseye",
+	"waitFor": "postCreateCommand",
+	"mounts": [
+		"source=${localWorkspaceFolder}/node_modules,target=${containerWorkspaceFolder}/node_modules,type=bind"
+	],
+	"postCreateCommand": "npm ci --timing",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"Gruntfuggly.todo-tree",
+				"styled-components.vscode-styled-components",
+				"christian-kohler.npm-intellisense",
+				"eamodio.gitlens",
+				"streetsidesoftware.code-spell-checker",
+				"biati.vscode-text-tools",
+				"ms-playwright.playwright"
+			]
+		}
+	},
+	"remoteUser": "root",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {},
+		"ghcr.io/devcontainers-contrib/features/act:1": {}
+	}
+}
