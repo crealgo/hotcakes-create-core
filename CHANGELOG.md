@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/crealgo/hotcakes-core/compare/v1.15.0...v1.15.1) (2024-06-04)
+
+
+### Performance Improvements
+
+* add ping ([96a42cb](https://github.com/crealgo/hotcakes-core/commit/96a42cb4c4cdf1f8e2e441f36a1820effbba21eb))
+
 # [1.15.0](https://github.com/crealgo/hotcakes-core/compare/v1.14.0...v1.15.0) (2024-06-04)
 
 

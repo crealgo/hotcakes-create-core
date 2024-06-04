@@ -1,6 +1,6 @@
 {
 	"name": "@hotcakes/core",
-	"version": "1.15.0",
+	"version": "1.15.1",
 	"main": "lib/index.js",
 	"type": "module",
 	"publishConfig": {
