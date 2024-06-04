@@ -1,7 +1,7 @@
 {
 	"name": "@hotcakes/core",
 	"version": "1.15.0",
-	"main": "lib/index.js",
+	"main": "./lib/index.js",
 	"type": "module",
 	"publishConfig": {
 		"access": "public"
@@ -10,8 +10,8 @@
 		"lib"
 	],
 	"bin": {
-		"ping": "lib/index.js",
-		"setup": "lib/scripts/setup.js"
+		"ping": "./lib/index.js",
+		"setup": "./lib/scripts/setup.js"
 	},
 	"scripts": {
 		"sync": "tsx src/build/sync.ts",
