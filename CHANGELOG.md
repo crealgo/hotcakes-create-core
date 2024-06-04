@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/crealgo/hotcakes-core/compare/v1.15.1...v1.15.2) (2024-06-04)
+
+
+### Bug Fixes
+
+* use relative path for bin files ([7ffa4fa](https://github.com/crealgo/hotcakes-core/commit/7ffa4fa77ed92a59cb274bfa1b540791ae3e82f8))
+
 ## [1.15.1](https://github.com/crealgo/hotcakes-core/compare/v1.15.0...v1.15.1) (2024-06-04)
 
 
