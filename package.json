@@ -10,12 +10,13 @@
 		"lib"
 	],
 	"bin": {
+		"ping": "lib/index.js",
 		"setup": "lib/scripts/setup.js"
 	},
 	"scripts": {
-		"sync": "npx tsx src/build/sync.ts",
+		"sync": "tsx src/build/sync.ts",
 		"prebuild": "npm run sync",
-		"build": "npx tsc --noEmit false && cp -R src/__templates__ lib/__templates__",
+		"build": "tsc --noEmit false && cp -R src/__templates__ lib/__templates__",
 		"prepack": "npm run build"
 	},
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
@@ -34,6 +35,7 @@
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
-		"@types/node": "^20.14.0"
+		"@types/node": "^20.14.0",
+		"tsx": "^4.11.2"
 	}
 }

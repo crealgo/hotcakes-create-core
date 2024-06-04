@@ -1,1 +1,3 @@
-console.log('Hey there, 🥞 Hotcakes!')
+#!/usr/bin/env node
+
+console.log('Hey there, 🥞 Hotcakes!');
