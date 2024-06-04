@@ -1,6 +1,9 @@
-name: Semantic Release
+name: Release Hotcakes
+run-name: Release ${{ github.event.repository.name }}
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:

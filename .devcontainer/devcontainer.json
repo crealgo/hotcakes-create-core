@@ -16,7 +16,8 @@
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
 				"biati.vscode-text-tools",
-				"ms-playwright.playwright"
+				"ms-playwright.playwright",
+				"github.vscode-github-actions"
 			]
 		}
 	},
