@@ -1,3 +1,15 @@
+# [1.15.0](https://github.com/crealgo/hotcakes-core/compare/v1.14.0...v1.15.0) (2024-06-04)
+
+
+### Features
+
+* update ([9ad2167](https://github.com/crealgo/hotcakes-core/commit/9ad2167b11470b0bc04ddb24e4daa09a31064e2d))
+
+
+### Performance Improvements
+
+* fix copy script ([b274c99](https://github.com/crealgo/hotcakes-core/commit/b274c99118d26aff3e4581bff00d682141198837))
+
 # [1.14.0](https://github.com/crealgo/hotcakes-core/compare/v1.13.0...v1.14.0) (2023-09-03)
 
 
