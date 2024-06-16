@@ -3,8 +3,6 @@
 async function main() {
 	const [nodeExec, execPath, command, ...flags] = process.argv;
 
-	console.log(nodeExec, execPath, command, flags);
-
 	if (command === 'hello') {
 		console.log('Hello, 🌎 World!');
 	}
@@ -45,8 +43,11 @@ async function main() {
 
 		const fs = await import('fs/promises');
 		const path = await import('path');
+		const url = await import('url');
 
-		console.log(response, execPath && path.dirname(execPath));
+		const from = path.resolve('.', process.cwd());
+
+		console.log('from', url.fileURLToPath(import.meta.resolve('@hotcakes/core')));
 	}
 }
 
