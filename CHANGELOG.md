@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/crealgo/hotcakes-core/compare/v1.15.3...v1.15.4) (2024-06-16)
+
+
+### Bug Fixes
+
+* update bin pointer ([0851558](https://github.com/crealgo/hotcakes-core/commit/085155828bc21ee939c4cee9e2d269e449277764))
+
 ## [1.15.3](https://github.com/crealgo/hotcakes-core/compare/v1.15.2...v1.15.3) (2024-06-16)
 
 
