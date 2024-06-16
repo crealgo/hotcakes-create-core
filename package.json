@@ -1,28 +1,29 @@
 {
 	"name": "@hotcakes/core",
 	"version": "1.15.2",
-	"main": "./lib/index.js",
+	"main": "index.js",
 	"type": "module",
 	"publishConfig": {
 		"access": "public"
 	},
 	"files": [
-		"lib"
+		".editorconfig",
+		".eslintrc.json",
+		".gitignore",
+		".releaserc.json",
+		"tsconfig.json"
 	],
 	"bin": {
-		"ping": "./lib/index.js",
-		"setup": "./lib/scripts/setup.js"
+		"hotcakes": "./bin/index.js"
 	},
 	"scripts": {
-		"sync": "tsx src/build/sync.ts",
-		"prebuild": "npm run sync",
-		"build": "tsc --noEmit false && cp -R src/__templates__ lib/__templates__",
-		"prepack": "npm run build"
+		"sync": "tsx src/build/sync.ts"
 	},
 	"repository": "https://github.com/crealgo/hotcakes-core.git",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
 	"license": "ISC",
 	"dependencies": {
+		"@inquirer/prompts": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.19.0",
 		"@typescript-eslint/parser": "^6.3.0",
 		"eslint": "^8.3.0",
