@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/crealgo/hotcakes-core/compare/v1.15.4...v1.16.0) (2024-06-16)
+
+
+### Features
+
+* add more files to sync ([4043b45](https://github.com/crealgo/hotcakes-core/commit/4043b45345a9d98d99cbab688c809e5708cc261f))
+
 ## [1.15.4](https://github.com/crealgo/hotcakes-core/compare/v1.15.3...v1.15.4) (2024-06-16)
 
 
