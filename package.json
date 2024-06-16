@@ -14,7 +14,7 @@
 		"tsconfig.json"
 	],
 	"bin": {
-		"hotcakes": "./bin/index.js"
+		"hotcakes": "index.js"
 	},
 	"scripts": {
 		"sync": "tsx src/build/sync.ts"
