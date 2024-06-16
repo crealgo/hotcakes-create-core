@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/crealgo/hotcakes-core/compare/v1.15.2...v1.15.3) (2024-06-16)
+
+
+### Performance Improvements
+
+* change command to setup ([f177b40](https://github.com/crealgo/hotcakes-core/commit/f177b402336b03786b54e8a76e53e9491f57856a))
+
 ## [1.15.2](https://github.com/crealgo/hotcakes-core/compare/v1.15.1...v1.15.2) (2024-06-04)
 
 
