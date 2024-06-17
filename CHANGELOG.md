@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/crealgo/hotcakes-core/compare/v1.16.1...v1.16.2) (2024-06-17)
+
+
+### Bug Fixes
+
+* revert abstraction ([ef29de3](https://github.com/crealgo/hotcakes-core/commit/ef29de3ad82aac342394aa27f360b709fd61152f))
+
 ## [1.16.1](https://github.com/crealgo/hotcakes-core/compare/v1.16.0...v1.16.1) (2024-06-17)
 
 
