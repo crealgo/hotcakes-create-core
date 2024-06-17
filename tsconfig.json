@@ -32,5 +32,5 @@
     /* If your code runs in the DOM: */
     "lib": ["es2022", "dom", "dom.iterable"],
   },
-	"include": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+	"include": ["*.ts", "*.tsx", "*.js", "*.jsx", "scripts/setup.js", "scripts/hello.js"],
 }
