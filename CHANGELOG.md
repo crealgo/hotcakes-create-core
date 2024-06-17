@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/crealgo/hotcakes-core/compare/v1.16.0...v1.16.1) (2024-06-17)
+
+
+### Performance Improvements
+
+* abstract functions ([4310c21](https://github.com/crealgo/hotcakes-core/commit/4310c215f64eced9ac7543268538448388c8a53d))
+
 # [1.16.0](https://github.com/crealgo/hotcakes-core/compare/v1.15.4...v1.16.0) (2024-06-16)
 
 
