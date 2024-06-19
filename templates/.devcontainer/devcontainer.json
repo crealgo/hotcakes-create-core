@@ -1,10 +1,10 @@
 {
 	"name": "Hotcakes Core | Dev Container",
-	"image": "docker.io/node:20-bullseye",
-	"waitFor": "postCreateCommand",
+	"image": "docker.io/node:lts-bullseye",
 	"mounts": [
-		"source=${localWorkspaceFolder}/node_modules,target=${containerWorkspaceFolder}/node_modules,type=bind"
+		"source=${localWorkspaceFolder}/node_modules,target=${containerWorkspaceFolder}/node_modules,type=bind,consistency=cached"
 	],
+	"waitFor": "postCreateCommand",
 	"postCreateCommand": "npm ci --timing",
 	"customizations": {
 		"vscode": {
@@ -17,7 +17,10 @@
 				"streetsidesoftware.code-spell-checker",
 				"biati.vscode-text-tools",
 				"ms-playwright.playwright",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"GitHub.vscode-pull-request-github",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	},
