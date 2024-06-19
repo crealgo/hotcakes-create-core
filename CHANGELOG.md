@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/crealgo/hotcakes-core/compare/v1.17.0...v1.17.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* publish devcontainer folder ([14da7ae](https://github.com/crealgo/hotcakes-core/commit/14da7ae538fb91c4c3088737a04997e6eca86ed8))
+
 # [1.17.0](https://github.com/crealgo/hotcakes-core/compare/v1.16.3...v1.17.0) (2024-06-19)
 
 
