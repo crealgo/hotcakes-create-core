@@ -112,6 +112,8 @@ const add = async subcommand => {
 		});
 
 		await fs.cp(path.resolve(from, 'devcontainers', choice), to, {recursive: true});
+
+		return;
 	}
 
 	throw new Error(`Unknown subcommand: ${subcommand}`);
