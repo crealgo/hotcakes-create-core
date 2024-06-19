@@ -5,7 +5,7 @@
 		"source=${localWorkspaceFolder}/node_modules,target=${containerWorkspaceFolder}/node_modules,type=bind,consistency=cached"
 	],
 	"waitFor": "postCreateCommand",
-	"postCreateCommand": "npm ci --timing",
+	"postCreateCommand": "npm ci",
 	"customizations": {
 		"vscode": {
 			"extensions": [
