@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/crealgo/hotcakes-core/compare/v1.16.2...v1.16.3) (2024-06-19)
+
+
+### Performance Improvements
+
+* move devcontainer files to templates ([caedc26](https://github.com/crealgo/hotcakes-core/commit/caedc26da263e537b323f5399755d543886d1f58))
+
 ## [1.16.2](https://github.com/crealgo/hotcakes-core/compare/v1.16.1...v1.16.2) (2024-06-17)
 
 
