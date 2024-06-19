@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/crealgo/hotcakes-core/compare/v1.18.0...v1.18.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* add copy destination ([07c3e7c](https://github.com/crealgo/hotcakes-core/commit/07c3e7cfe34d8014d529cd9b3cd52f8d8693a986))
+
 # [1.18.0](https://github.com/crealgo/hotcakes-core/compare/v1.17.1...v1.18.0) (2024-06-19)
 
 
