@@ -1,5 +1,5 @@
 {
-	"name": "Hotcakes Core | Dev Container",
+	"name": "🥞 Hotcakes Dev Container",
 	"image": "docker.io/node:lts-bullseye",
 	"mounts": [
 		"source=${localWorkspaceFolder}/node_modules,target=${containerWorkspaceFolder}/node_modules,type=bind,consistency=cached"
