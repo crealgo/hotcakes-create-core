@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/crealgo/hotcakes-core/compare/v1.17.1...v1.18.0) (2024-06-19)
+
+
+### Features
+
+* update ci actions ([4e907b7](https://github.com/crealgo/hotcakes-core/commit/4e907b79f4249fe2560a262bcc9a26f3febd1e58))
+
 ## [1.17.1](https://github.com/crealgo/hotcakes-core/compare/v1.17.0...v1.17.1) (2024-06-19)
 
 
