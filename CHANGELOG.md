@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/crealgo/hotcakes-core/compare/v1.18.1...v1.18.2) (2024-06-19)
+
+
+### Performance Improvements
+
+* update concat to remove arrays ([18c7d17](https://github.com/crealgo/hotcakes-core/commit/18c7d1777a6bc7c30429512e4801ce1abd8db36a))
+
 ## [1.18.1](https://github.com/crealgo/hotcakes-core/compare/v1.18.0...v1.18.1) (2024-06-19)
 
 
