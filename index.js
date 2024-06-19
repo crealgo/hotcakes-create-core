@@ -95,7 +95,7 @@ const setup = async () => {
  * @returns {Promise<void>} A promise that resolves when the subcommand is added.
  */
 const add = async subcommand => {
-	if (typeof subcommand === 'undefined') {
+	if (!subcommand) {
 		throw new Error('No subcommand provided');
 	}
 
@@ -108,22 +108,19 @@ const add = async subcommand => {
 		const options = await fs.readdir(path.resolve(from, 'devcontainers'));
 
 		const choice = await select({
-			choices: options.map(o => ({
-				name: o,
-				value: o,
-			})),
-			message: 'Pick a devcontainer to add to your project',
+			choices: options.map(o => ({name: o, value: o})),
+			message: 'Pick a devcontainer to add to your project.',
 			default: 'node',
 		});
 
-		await fs.cp(path.resolve(from, 'devcontainers', choice), path.resolve(to, '.devcontainer'), {
-			recursive: true,
-		});
+		await fs.cp(path.resolve(from, 'devcontainers', choice), to, {recursive: true});
 	}
+
+	throw new Error(`Unknown subcommand: ${subcommand}`);
 };
 
 const main = async () => {
-	const [nodeExec, execPath, command, subcommand] = process.argv;
+	const [command, subcommand] = process.argv.slice(2);
 
 	switch (command) {
 		case 'hello':
