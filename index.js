@@ -59,28 +59,26 @@ const setup = async () => {
 		await fs.copyFile(path.resolve(from, file), path.resolve(to, file));
 
 		if (file === '.eslintrc.json') {
-			packagesToInstall.concat([
+			packagesToInstall.concat(
 				'@typescript-eslint/eslint-plugin',
 				'@typescript-eslint/parser',
 				'eslint-config-typescript',
 				'eslint-config-xo',
 				'eslint-config-xo-react',
 				'eslint-config-xo-typescript',
-			]);
+			);
 		}
 
 		if (file === 'tsconfig.json') {
-			packagesToInstall.concat([
-				'typescript',
-			]);
+			packagesToInstall.concat('typescript');
 		}
 
 		if (file === '.releaserc.json') {
-			packagesToInstall.concat([
+			packagesToInstall.concat(
 				'semantic-release',
 				'@semantic-release/changelog',
 				'@semantic-release/git',
-			]);
+			);
 		}
 
 		child_process.spawn(`npm install --save-dev ${packagesToInstall.join(' ')}`);
