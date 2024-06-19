@@ -1,3 +1,10 @@
+## [1.18.4](https://github.com/crealgo/hotcakes-core/compare/v1.18.3...v1.18.4) (2024-06-19)
+
+
+### Performance Improvements
+
+* remove --timing from clean-install ([c6eec57](https://github.com/crealgo/hotcakes-core/commit/c6eec575e9d665bf5d00d64557788dca24e0f10e))
+
 ## [1.18.3](https://github.com/crealgo/hotcakes-core/compare/v1.18.2...v1.18.3) (2024-06-19)
 
 
