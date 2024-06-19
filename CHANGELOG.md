@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/crealgo/hotcakes-core/compare/v1.16.3...v1.17.0) (2024-06-19)
+
+
+### Features
+
+* add script to add devcontainer files ([f8dd059](https://github.com/crealgo/hotcakes-core/commit/f8dd059524c57b44325ca79ffc81e553afa74633))
+
 ## [1.16.3](https://github.com/crealgo/hotcakes-core/compare/v1.16.2...v1.16.3) (2024-06-19)
 
 
