@@ -1,3 +1,10 @@
+## [1.18.3](https://github.com/crealgo/hotcakes-core/compare/v1.18.2...v1.18.3) (2024-06-19)
+
+
+### Bug Fixes
+
+* break if statement in add command ([c59742c](https://github.com/crealgo/hotcakes-core/commit/c59742c205224e732d0c4ccb40a693d0bd2d95b6))
+
 ## [1.18.2](https://github.com/crealgo/hotcakes-core/compare/v1.18.1...v1.18.2) (2024-06-19)
 
 
