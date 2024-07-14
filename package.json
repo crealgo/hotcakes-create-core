@@ -1,19 +1,11 @@
 {
-	"name": "@hotcakes/core",
+	"name": "@hotcakes/create",
 	"version": "1.18.3",
 	"main": "index.js",
 	"type": "module",
 	"publishConfig": {
 		"access": "public"
 	},
-	"files": [
-		"devcontainers",
-		".editorconfig",
-		".eslintrc.json",
-		".gitignore",
-		".releaserc.json",
-		"tsconfig.json"
-	],
 	"bin": {
 		"hotcakes": "index.js"
 	},
