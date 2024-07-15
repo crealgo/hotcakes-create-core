@@ -1,6 +1,7 @@
 {
 	"name": "@hotcakes/create-core",
 	"version": "0.0.0-semantically-released",
+	"type": "module",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -12,15 +13,13 @@
 		}
 	},
 	"scripts": {
-		"build:cjs": "tsc --noEmit false --rootDir src --outDir dist/cjs --module commonjs --moduleResolution node",
-		"build:mjs": "tsc --noEmit false --rootDir src --outDir dist/mjs",
-		"build": "npm run build:cjs && npm run build:mjs",
+		"build": "tsc --noEmit false --rootDir src --outDir dist",
 		"prepublishOnly": "npm run build"
 	},
 	"files": [
 		"dist/**"
 	],
-	"bin": "./dist/cjs/index.js",
+	"bin": "./dist/index.js",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
 	"license": "MIT",
 	"devDependencies": {
