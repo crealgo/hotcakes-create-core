@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [
-    'semistandard'
-  ]
-};
+    "extends": [
+        "@hotcakes/eslint-config"
+    ]
+}
