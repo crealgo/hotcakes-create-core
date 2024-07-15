@@ -4,25 +4,17 @@ import childProcess from 'child_process';
 import fs from 'fs/promises';
 import selectFrom from '@inquirer/checkbox';
 
-type Task = 'gitignore' | 'eslint' | 'typescript' | 'semrel';
-type Template = '.releaserc.json' | '.gitignore' | 'release-package.yaml' | 'tsconfig.json';
-
 const run = (command = '') => childProcess.execSync(command, {
 	stdio: 'inherit',
 });
 
-const getTasksFromUser = async () => selectFrom<Task>({
+const getTasksFromUser = async <T>(taskNames: T[]): Promise<T[]> => selectFrom({
 	required: true,
 	message: 'Select the items to setup',
-	choices: [
-		{value: 'gitignore'},
-		{value: 'eslint'},
-		{value: 'typescript'},
-		{name: 'semantic-release', value: 'semrel'},
-	],
+	choices: taskNames.map(name => ({value: name})),
 });
 
-const fetchGist = async (filename: Template) => {
+const fetchGist = async (filename: string) => {
 	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/${filename}`);
 
 	if (!response.ok) {
@@ -38,6 +30,9 @@ async function main() {
 	}
 
 	const taskMap = {
+		async nvmrc() {
+			// TODO:
+		},
 		async gitignore() {
 			await fs.writeFile('.gitignore', await fetchGist('.gitignore'));
 		},
@@ -58,9 +53,9 @@ async function main() {
 			await fs.writeFile('.releaserc.json', await fetchGist('.releaserc.json'));
 			await fs.writeFile('.github/workflows/release-package.yaml', await fetchGist('release-package.yaml'));
 		},
-	};
+	} as const;
 
-	const tasks = await getTasksFromUser();
+	const tasks = await getTasksFromUser(Object.keys(taskMap) as Array<keyof typeof taskMap>);
 
 	for await (const task of tasks) {
 		await taskMap[task]();
