@@ -23,7 +23,7 @@ const getTasksFromUser = async () => selectFrom<Task>({
 });
 
 const fetchGist = async (filename: Template) => {
-	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/7b19779002e9dc00ee66a6bffa02f3531daa488f/${filename}`);
+	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/${filename}`);
 
 	if (!response.ok) {
 		throw new Error('Something went wrong!');
