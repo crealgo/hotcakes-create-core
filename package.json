@@ -6,14 +6,15 @@
 	},
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.js",
+			"require": "./dist/cjs/index.js",
+			"import": "./dist/mjs/index.js",
 			"default": "./src/index.ts"
 		}
 	},
 	"scripts": {
-		"build:cjs": "tsc --noEmit false --rootDir src --outDir dist/cjs --module commonjs",
+		"build:cjs": "tsc --noEmit false --rootDir src --outDir dist/cjs --module commonjs --moduleResolution node",
 		"build:mjs": "tsc --noEmit false --rootDir src --outDir dist/mjs",
+		"build": "npm run build:cjs && npm run build:mjs",
 		"prepublishOnly": "npm run build"
 	},
 	"files": [
