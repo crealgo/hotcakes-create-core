@@ -29,6 +29,10 @@ async function main() {
 		throw new Error('Please initialize you\'re repository with "npm init" before using @hotcakes!');
 	}
 
+	if (!run('git status --short')) {
+		throw new Error('You still have changes in your HEAD. Please stash them before moving forward');
+	}
+
 	const taskMap = {
 		async nvmrc() {
 			await fs.writeFile('.gitignore', await fetchGist('.nvmrc'));
@@ -57,10 +61,6 @@ async function main() {
 
 	const tasks = await getTasksFromUser(Object.keys(taskMap) as Array<keyof typeof taskMap>);
 
-	// save work
-	run('git add .');
-	run('git stash');
-
 	for await (const task of tasks) {
 		await taskMap[task]();
 	}
@@ -68,9 +68,6 @@ async function main() {
 	// apply changes
 	run('git add .');
 	run('git commit --author=":robot: Crealgo Bot <hello.crealgo@gmail.com>" -m "feat(:pancakes:): run @hotcakes/create-core setup"');
-
-	// reload work
-	run('git stash pop');
 }
 
 void main();
