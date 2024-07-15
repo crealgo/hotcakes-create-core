@@ -2,7 +2,7 @@
 
 import childProcess from 'child_process';
 import fs from 'fs/promises';
-import prompts from '@inquirer/prompts';
+import selectFrom from '@inquirer/checkbox';
 
 type Task = 'gitignore' | 'eslint' | 'typescript' | 'semrel';
 type Template = '.releaserc.json' | '.gitignore' | 'release-package.yaml' | 'tsconfig.json';
@@ -11,7 +11,7 @@ const run = (command = '') => childProcess.execSync(command, {
 	stdio: 'inherit',
 });
 
-const getTasksFromUser = async () => prompts.checkbox<Task>({
+const getTasksFromUser = async () => selectFrom<Task>({
 	required: true,
 	message: 'Select the items to setup',
 	choices: [

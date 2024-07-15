@@ -12,17 +12,18 @@
 		}
 	},
 	"scripts": {
-		"prepublishOnly": "tsc --noEmit false --rootDir src --outDir dist"
+		"build:cjs": "tsc --noEmit false --rootDir src --outDir dist/cjs --module commonjs",
+		"build:mjs": "tsc --noEmit false --rootDir src --outDir dist/mjs",
+		"prepublishOnly": "npm run build"
 	},
-	"files": ["dist/**"],
+	"files": [
+		"dist/**"
+	],
 	"bin": {
 		"create-core": "./dist/index.js"
 	},
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
 	"license": "MIT",
-	"dependencies": {
-		"@inquirer/prompts": "^5.0.5"
-	},
 	"devDependencies": {
 		"@hotcakes/eslint-config": "^1.2.0",
 		"@hotcakes/release-config": "^1.2.0",
@@ -38,5 +39,8 @@
 		"eslint-plugin-react": "^7.34.4",
 		"eslint-plugin-react-hooks": "^4.6.2",
 		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"@inquirer/checkbox": "^2.3.10"
 	}
 }
