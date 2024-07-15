@@ -20,9 +20,7 @@
 	"files": [
 		"dist/**"
 	],
-	"bin": {
-		"create-core": "./dist/index.js"
-	},
+	"bin": "./dist/cjs/index.js",
 	"author": "Crealgo, LLC <hello.crealgo@gmail.com> (https://crealgo.com)",
 	"license": "MIT",
 	"devDependencies": {
