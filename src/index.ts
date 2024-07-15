@@ -67,7 +67,7 @@ async function main() {
 
 	// apply changes
 	run('git add .');
-	run('git commit -m \'feat(🥞): run @hotcakes/create-core setup\'');
+	run('git commit --author=":robot: Crealgo Bot <hello.crealgo@gmail.com>" -m "feat(:pancakes:): run @hotcakes/create-core setup"');
 
 	// reload work
 	run('git stash pop');
