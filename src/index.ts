@@ -1,13 +1,40 @@
 #!/usr/bin/env node
 
+import selectFrom from '@inquirer/checkbox';
 import childProcess from 'child_process';
 import fs from 'fs/promises';
-import getSelectedTasks from './utils/getSelectedTasks';
-import copyGist from './utils/copyGist';
 
 const run = (command = '') => childProcess.execSync(command, {
 	stdio: 'inherit',
 });
+
+const copyGist = async (filename: string, newPath?: string) => {
+	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/${filename}`);
+
+	if (!response.ok) {
+		throw new Error('Something went wrong!');
+	}
+
+	return fs.writeFile(newPath ?? filename, await response.text());
+};
+
+type TaskInfo = {
+	checked: boolean;
+	action: Function;
+};
+
+const getSelectedTasks = async <T extends Record<K, TaskInfo>, K extends keyof T>(taskMap: T) => {
+	const taskNames = Object.keys(taskMap) as K[];
+
+	return selectFrom({
+		required: true,
+		message: 'Select the items to setup',
+		choices: taskNames.map(name => ({
+			value: name,
+			checked: taskMap[name].checked,
+		})),
+	});
+};
 
 const getTaskMap = () => ({
 	editorconfig: {
