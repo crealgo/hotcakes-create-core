@@ -5,26 +5,7 @@ import fs from 'fs/promises';
 import prompts from '@inquirer/prompts';
 
 type Task = 'gitignore' | 'eslint' | 'typescript' | 'semrel';
-
-const gitignoreConfig = /* yaml */`
-name: Release Package
-
-on:
-  push:
-    branches: [main, next]
-
-permissions:
-  contents: write
-
-jobs:
-  semantic-release:
-    uses: crealgo/hotcakes-release-config/.github/workflows/semantic-release.yaml@main
-    secrets: inherit
-`;
-
-const tsconfig = {
-	extends: '@hotcakes/tsconfig',
-};
+type Template = '.releaserc.json' | '.gitignore' | 'release-package.yaml' | 'tsconfig.json';
 
 const run = (command = '') => childProcess.execSync(command, {
 	stdio: 'inherit',
@@ -41,6 +22,12 @@ const getTasksFromUser = async () => prompts.checkbox<Task>({
 	],
 });
 
+const fetchGist = async (filename: Template) => {
+	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/7b19779002e9dc00ee66a6bffa02f3531daa488f/${filename}`);
+
+	return response.text();
+};
+
 async function main() {
 	if (!(await fs.stat('package.json')).isFile()) {
 		throw new Error('Please initialize you\'re repository with "npm init" before using @hotcakes!');
@@ -48,9 +35,7 @@ async function main() {
 
 	const taskMap = {
 		async gitignore() {
-			const response = await fetch('https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore');
-
-			await fs.writeFile('.gitignore', await response.text());
+			await fs.writeFile('.gitignore', await fetchGist('.gitignore'));
 		},
 		async eslint() {
 			run('npm init @eslint/config -- --config @hotcakes/eslint-config');
@@ -58,16 +43,16 @@ async function main() {
 		async typescript() {
 			run('npm install --save-dev typescript @hotcakes/tsconfig');
 
-			await fs.writeFile('tsconfig.json', JSON.stringify(tsconfig, null, 2), {encoding: 'utf-8'});
+			await fs.writeFile('tsconfig.json', await fetchGist('tsconfig.json'));
 		},
 		async semrel() {
 			run('npm pkg set publishConfig.access=public');
-			run('npm pkg set release.extends=@hotcakes/release-config');
 			run('npm pkg set license=MIT');
 			run('npm install --save-dev @hotcakes/release-config');
 
 			await fs.mkdir('.github/workflows', {recursive: true});
-			await fs.writeFile('.github/workflows/release-package.yaml', gitignoreConfig);
+			await fs.writeFile('.releaserc.json', await fetchGist('.releaserc.json'));
+			await fs.writeFile('.github/workflows/release-package.yaml', await fetchGist('release-package.yaml'));
 		},
 	};
 
