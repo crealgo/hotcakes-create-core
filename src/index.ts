@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import selectFrom from '@inquirer/checkbox';
 
 const run = (command = '') => childProcess.execSync(command, {
-	stdio: 'inherit',
+	stdio: 'pipe',
 });
 
 const getTasksFromUser = async <T>(taskNames: T[]): Promise<T[]> => selectFrom({
@@ -29,7 +29,9 @@ async function main() {
 		throw new Error('Please initialize you\'re repository with "npm init" before using @hotcakes!');
 	}
 
-	if (!run('git status --short')) {
+	const gitStatus = run('git status --short');
+
+	if (/[a-z]/ig.test(gitStatus.toString())) {
 		throw new Error('You still have changes in your working tree. Please stash them before moving forward');
 	}
 
