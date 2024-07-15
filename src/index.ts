@@ -31,7 +31,7 @@ async function main() {
 
 	const taskMap = {
 		async nvmrc() {
-			// TODO:
+			await fs.writeFile('.gitignore', await fetchGist('.nvmrc'));
 		},
 		async gitignore() {
 			await fs.writeFile('.gitignore', await fetchGist('.gitignore'));
@@ -57,9 +57,20 @@ async function main() {
 
 	const tasks = await getTasksFromUser(Object.keys(taskMap) as Array<keyof typeof taskMap>);
 
+	// save work
+	run('git add .');
+	run('git stash');
+
 	for await (const task of tasks) {
 		await taskMap[task]();
 	}
+
+	// apply changes
+	run('git add .');
+	run('git commit -m \'feat(🥞): run @hotcakes/create-core setup\'');
+
+	// reload work
+	run('git stash pop');
 }
 
 void main();
