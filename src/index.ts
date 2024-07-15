@@ -30,7 +30,7 @@ async function main() {
 	}
 
 	if (!run('git status --short')) {
-		throw new Error('You still have changes in your HEAD. Please stash them before moving forward');
+		throw new Error('You still have changes in your working tree. Please stash them before moving forward');
 	}
 
 	const taskMap = {
@@ -67,7 +67,7 @@ async function main() {
 
 	// apply changes
 	run('git add .');
-	run('git commit --author=":robot: Crealgo Bot <hello.crealgo@gmail.com>" -m "feat(:pancakes:): run @hotcakes/create-core setup"');
+	run('git commit --author="🤖 Crealgo Bot <hello.crealgo@gmail.com>" -m "feat(🥞): run @hotcakes/create-core setup"');
 }
 
 void main();
