@@ -4,9 +4,18 @@ import selectFrom from '@inquirer/checkbox';
 import childProcess from 'child_process';
 import fs from 'fs/promises';
 
-const run = (command = '') => childProcess.execSync(command, {
-	stdio: 'inherit',
-});
+const run = (command = '', stdout: 'inherit' | 'pipe' = 'inherit') => {
+	console.log(command);
+
+	const result = childProcess.execSync(command, {
+		stdio: ['inherit', stdout, 'inherit'],
+		encoding: 'utf-8',
+	});
+
+	console.log(result);
+
+	return result;
+};
 
 const copyGist = async (filename: string, newPath?: string) => {
 	const response = await fetch(`https://gist.githubusercontent.com/manasc/e25aa5d86de233ba72bbb017d216ac8c/raw/${filename}`);
@@ -96,9 +105,9 @@ async function main() {
 		throw new Error('Please initialize you\'re repository with "npm init" before using @hotcakes!');
 	}
 
-	const gitStatus = run('git status --short');
+	const gitStatus = run('git status --short', 'pipe');
 
-	if (/[a-z]/ig.test(gitStatus.toString())) {
+	if (/[a-z]/ig.test(gitStatus)) {
 		throw new Error('You still have changes in your working tree. Please stash them before moving forward');
 	}
 
