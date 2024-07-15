@@ -5,13 +5,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"exports": {
-		".": {
-			"require": "./dist/cjs/index.js",
-			"import": "./dist/mjs/index.js",
-			"default": "./src/index.ts"
-		}
-	},
+	"exports": "./dist/index.js",
 	"scripts": {
 		"build": "tsc --noEmit false --rootDir src --outDir dist",
 		"prepublishOnly": "npm run build"
